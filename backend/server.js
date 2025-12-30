@@ -118,25 +118,6 @@ const startServer = async () => {
 };
 
 
-/*
-const startServer = async () => {
-  try {
-    // 1. Start listening FIRST
-    app.listen(PORT, '0.0.0.0', () => {
-      console.log(`Server running on port ${PORT}`);
-    });
-
-    // 2. Connect to DB SECOND (don't 'await' it if you want the server up now)
-    connectDB(); 
-    
-  } catch (error) {
-    console.error("Failed to start server:", error);
-    process.exit(1);
-  }
-};
-*/
-
-
 startServer();
 
 /* =========================
