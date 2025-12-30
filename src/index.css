@@ -1,12 +1,85 @@
-
+/*
 @import "tailwindcss";
 
-/* Utility for hiding scrollbar */
+/* Utility for hiding scrollbar *
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 
 .scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+*/
+
+
+
+
+
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Merriweather", ui-serif, Georgia, serif;
+
+  /* Primary Green Colors */
+  --color-primary-50: #ebf5ed;
+  --color-primary-100: #d1e6d6;
+  --color-primary-200: #a3ccb0;
+  --color-primary-300: #72b086;
+  --color-primary-400: #46915e;
+  --color-primary-500: #267540;
+  --color-primary-600: #143f17;
+  --color-primary-700: #103313;
+  --color-primary-800: #0d2610;
+  --color-primary-900: #081a0b;
+  --color-primary: var(--color-primary-600);
+
+  /* Secondary Orange Colors */
+  --color-secondary-50: #fef6e8;
+  --color-secondary-100: #fcebc7;
+  --color-secondary-200: #f9d68f;
+  --color-secondary-300: #f6bf56;
+  --color-secondary-400: #f49f17;
+  --color-secondary-500: #d9820e;
+  --color-secondary-600: #ad6106;
+  --color-secondary-700: #7c4305;
+  --color-secondary-800: #4d2803;
+  --color-secondary-900: #211001;
+  --color-secondary: var(--color-secondary-400);
+
+  /* Farm Alias (for backward compatibility) */
+  --color-farm-50: #ebf5ed;
+  --color-farm-100: #d1e6d6;
+  --color-farm-200: #a3ccb0;
+  --color-farm-300: #72b086;
+  --color-farm-400: #46915e;
+  --color-farm-500: #267540;
+  --color-farm-600: #143f17;
+  --color-farm-700: #103313;
+  --color-farm-800: #0d2610;
+  --color-farm-900: #081a0b;
+
+  /* Animations */
+  --animate-slide-in-right: slide-in-right 0.3s ease-out forwards;
+  --animate-fade-out: fade-out 0.3s ease-in forwards;
+
+  @keyframes slide-in-right {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+  @keyframes fade-out {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+}
+
+/* Custom Utilities */
+@utility scrollbar-hide {
+  &::-webkit-scrollbar {
+    display: none;
+  }
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
