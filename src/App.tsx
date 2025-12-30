@@ -194,6 +194,7 @@ import { StoreProvider, useStore } from "./context/StoreContext";
 import { ToastProvider } from "./context/ToastContext";
 import { ToastContainer } from "./components/Toast";
 
+
 // Static UI Components (Small, needed immediately)
 import Header from "./components/Header";
 import Footer from "./components/Footer";

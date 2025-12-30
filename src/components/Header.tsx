@@ -4,7 +4,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ShoppingCart, Menu, Search, User as UserIcon, X, Leaf, ChevronRight, LayoutDashboard, Heart } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
 import AuthModal from './AuthModal';
-import { CATEGORIES } from '../constants';
+import { CATEGORIES } from '../../src/constants';
 import { Product } from '../types';
 
 const Header: React.FC = () => {

@@ -6,7 +6,7 @@ import { MapPin, CheckCircle, ShoppingBag, ArrowLeft, CreditCard, Truck, AlertTr
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { NIGERIA_LOCATIONS } from '../constants';
+import { NIGERIA_LOCATIONS } from '../../src/constants';
 
 const addressSchema = z.object({
   label: z.string().min(2, "Label is required (e.g. Home, Work)"),

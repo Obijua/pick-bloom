@@ -1,5 +1,5 @@
 
-import { Category, Product, Vendor } from './types';
+import { Category, Product, Vendor } from '../src/types';
 
 export const NIGERIA_LOCATIONS: Record<string, string[]> = {
   "FCT": ["Abaji", "Bwari", "Gwagwalada", "Kuje", "Kwali", "Municipal Area Council"],

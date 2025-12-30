@@ -3,7 +3,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Filter, X, ChevronDown, ChevronLeft, ChevronRight, Search, RefreshCcw } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
-import { CATEGORIES } from '../constants';
+import { CATEGORIES } from '../../src/constants';
 import ProductCard from '../components/ProductCard';
 import { ProductCardSkeleton } from '../components/Skeleton';
 

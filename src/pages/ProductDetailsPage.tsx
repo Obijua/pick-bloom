@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Minus, Plus, Truck, ArrowLeft, ShieldCheck, MapPin, RefreshCw, Star, MessageSquare, AlertTriangle, ArrowRight } from 'lucide-react';
-import { VENDORS } from '../constants';
+import { VENDORS } from '../../src/constants';
 import { useStore } from '../context/StoreContext';
 import { Skeleton } from '../components/Skeleton';
 import { Category } from '../types';

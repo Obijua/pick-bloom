@@ -4,7 +4,7 @@ import { useStore } from '../context/StoreContext';
 import { useNavigate } from 'react-router-dom';
 import { User, MapPin, Plus, Trash2, Camera, Save, Edit2, ShoppingBag, X, Package, ChevronRight, Clock, AlertTriangle, Send, RefreshCcw, XCircle } from 'lucide-react';
 import { Address, Order, OrderStatus } from '../types';
-import { NIGERIA_LOCATIONS } from '../constants';
+import { NIGERIA_LOCATIONS } from '../../src/constants';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
