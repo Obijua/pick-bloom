@@ -2,7 +2,7 @@
 import { Product, User, Order, OrderStatus, Address, CartItem, AppSettings, Vendor, Review } from '../types';
 
 // --- CONFIGURATION ---
-
+/*
 const sanitizeUrl = (url: string | undefined): string => {
     const DEFAULT_API = 'https://pick-bloom.onrender.com/api';
     if (!url || typeof url !== 'string' || url.trim() === '') return DEFAULT_API;
@@ -10,6 +10,44 @@ const sanitizeUrl = (url: string | undefined): string => {
     if (lower.includes('google.com') || lower.includes('googleapis') || lower.includes('gemini')) return DEFAULT_API;
     return url.endsWith('/') ? url.slice(0, -1) : url;
 };
+*/
+
+
+
+const sanitizeUrl = (url: string | undefined): string => {
+    const DEFAULT_API = 'https://pick-bloom.onrender.com/api';
+
+    // 1. Missing or invalid → use default
+    if (!url || typeof url !== 'string' || url.trim() === '') {
+        return DEFAULT_API;
+    }
+
+    let cleanUrl = url.trim().replace(/\/$/, '');
+
+    const lower = cleanUrl.toLowerCase();
+
+    // 2. Block invalid external URLs
+    if (
+        lower.includes('google.com') ||
+        lower.includes('googleapis') ||
+        lower.includes('gemini')
+    ) {
+        return DEFAULT_API;
+    }
+
+    // 3. 🔥 FORCE `/api` suffix
+    if (!cleanUrl.endsWith('/api')) {
+        cleanUrl = `${cleanUrl}/api`;
+    }
+
+    return cleanUrl;
+};
+
+
+
+
+
+
 
 const getBaseUrl = () => {
     let envUrl: string | undefined = undefined;
