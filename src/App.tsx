@@ -97,7 +97,7 @@ const AppContent: React.FC = () => {
               <Leaf className="h-6 w-6 text-primary-600" />
             </div>
           </div>
-          <p className="text-gray-500 font-medium animate-pulse">Connecting to Market...</p>
+          <p className="text-gray-500 font-medium animate-pulse"></p>
         </div>
       </div>
     );
