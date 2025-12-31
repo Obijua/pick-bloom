@@ -162,7 +162,7 @@ const app = express();
 
 // UPDATED CORS: Only allow your Vercel URL in production
 const allowedOrigins = [
-  "https://pick-bloom.vercel.app", // Your Vercel URL
+  "https://pick-bloom-three.vercel.app", // Your Vercel URL
   "http://localhost:3000",         // Local development
   "http://localhost:5173"          // Vite default local
 ];
@@ -179,9 +179,13 @@ app.use(
       }
     },
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
+
+app.options("*", cors());
+
 
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true }));
